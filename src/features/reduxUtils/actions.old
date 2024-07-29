@@ -1,0 +1,42 @@
+// import { hashPassword } from '../appUtils/passwordHash/PasswordHash';
+// // export const CREATE_ACCOUNT = 'CREATE_ACCOUNT';
+
+// interface CreatAccountPayload {
+//     firstName: string;
+//     lastName: string;
+//     email: string;
+//     password: string;
+// }
+// interface CreatAccountAction {
+//     type: typeof CREATE_ACCOUNT;
+//     payload: CreatAccountPayload;
+// }
+
+
+// export const SIGN_IN = 'SIGN_IN';
+
+
+// interface SignInPayload{
+//     email:string;
+//     password:string;
+// }
+
+// interface SignInAction{
+//     type:typeof SIGN_IN
+//     payload:SignInPayload
+// }
+
+// export type ActionTypes = CreatAccountAction | SignInAction;
+
+
+// export const creatAccount = (user: CreatAccountPayload): ActionTypes => {
+//     const hashedPassword = hashPassword(user.password);
+//     return {
+//         type: CREATE_ACCOUNT,
+//         payload: { ...user, password: hashedPassword },
+//     };
+// };
+// export const signin = (user: SignInPayload): ActionTypes => ({
+//     type: SIGN_IN,
+//     payload: user,
+// });

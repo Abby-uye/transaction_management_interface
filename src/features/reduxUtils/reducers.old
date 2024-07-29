@@ -1,0 +1,96 @@
+// import {CREATE_ACCOUNT,SIGN_IN,ActionTypes} from "./actions";
+// import {comparePassword} from "../appUtils/passwordHash/PasswordHash";
+
+// interface AuthState {
+//     user: {
+//         firstName: string;
+//         lastName: string;
+//         email: string;
+//         password: string;
+//     } | null;
+//     isAuthenticated: boolean;
+// }
+// const initialState: AuthState = {
+//     user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : null,
+//     isAuthenticated: !!localStorage.getItem('user'),
+// };
+
+// // const authReducer = (state = initialState, action: ActionTypes): AuthState => {
+// //     switch (action.type) {
+// //         case CREATE_ACCOUNT:
+// //             const newUser = action.payload;
+// //             const existingUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : null;
+
+// //             if (existingUser && existingUser.email === newUser.email) {
+// //                 alert('User already exists. Please log in.');
+// //                 return state;
+// //             } else {
+// //                 localStorage.setItem('user', JSON.stringify(newUser));
+// //                 return {
+// //                     ...state,
+// //                     user: newUser,
+// //                     isAuthenticated: false,
+// //                 };
+// //             }
+// //         case SIGN_IN:
+// //             const signInUser = action.payload;
+// //             const storedUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : null;
+
+
+// //             if (storedUser &&
+// //                 storedUser.email === signInUser.email &&
+// //                 comparePassword(signInUser.password, storedUser.password)) {
+// //                 return {
+// //                     ...state,
+// //                     user: storedUser,
+// //                     isAuthenticated: true,
+// //                 };
+// //             } else {
+// //                 alert('Invalid email or password.');
+// //                 return state;
+// //             }
+// //         default:
+// //             return state;
+// //     }
+// // };
+
+// export const authSlice = createSlice({
+//     name: "auth-slice",
+//     initialState,
+//     reducers: {
+//         CREATE_ACCOUNT: (state, action:any) => {
+//         // state.card_details = action.payload;
+//       },
+//       SIGN_IN: (state, action:any) => {
+//         // state.card_details = action.payload;
+//       },
+
+//     },
+  
+//     extraReducers: (builder) => {
+//       const builderHandler = new ReduxBuilderHandler(builder, initialState);
+//       // builderHandler.handleStates(getBusinessCards, undefined, (state)=>{
+  
+//       // } );
+  
+//       // pending state
+//       builder.addCase(getBusinessCardDetails.pending, (state) => {
+//         state.loading = true;
+//       });
+  
+  
+//       // fullfilled state
+//       builder.addCase(getBusinessCardDetails.fulfilled, (state) => {
+//         state.loading = false;
+//       });
+  
+  
+//       // rejected state
+//       builder.addCase(getBusinessCardDetails.rejected, (state) => {
+//         state.loading = false;
+//       });
+  
+//     },
+//   });
+
+// export default authReducer;
